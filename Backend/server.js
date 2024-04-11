@@ -11,8 +11,8 @@ app.use(cors());
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    app.listen(process.env.PORT, () => {
-      console.log("Listening to " + process.env.PORT);
+    app.listen(process.env, () => {
+      console.log("Listening to " + process.env);
     });
   })
   .catch((error) => console.log(error));
